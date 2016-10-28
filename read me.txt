@@ -1,0 +1,46 @@
+1) install sublime text editor
+2)install git
+3)install node.js  type: node --version and npm --version in cmd to check if both have been istalled
+4)to isntall browser sync. visit 
+https://www.browsersync.io/ and coppy: npm install -g browser-sync
+paste it on command prompt and then run it (node.js has to be installed first).
+type : browser-sync --version to check if browser sync was installed
+
+Github and BrowserSync:
+1) read the gitbook online atleast first 3 chapters to know about the github hosting of the web pages
+2) you will have to submit your assignmetns throught github
+3) look at the browser sync :) google formore options
+
+|step 1|: create a new repository from gitHub.com (+ sign at the top right corner of the page)
+|step 2|: in the repository page go to settings -> github pages -> launch automatic page generator -> continue to layouts -> publish page
+|step 3|: you will now have the link to the page you have published and can visit it :). so your page now is hosted
+|step 4|: after you refresh the page , the link provided to the publish site will be gone. to get it back you will just have to go to the settings again and           in the githyb pages you will find it 
+|step 5|: now in the branches option, goto gh-pages and you will the documents attached to your project.
+you will only see whatever is in the gh-pages using the link that was given to you.
+|step 6|: to clone your project to your desktop go to cmd 
+          type: git clone https://TheCloneURLuJustCoppiedFromGithub.com and press enter
+|step 7|: go to the github repository directory on your pc. or go to the root directory and press shift + right click to open that directory in comand           prompt
+          for now we are in the courseera-test dir. type: git status
+|step 7|: we will be on the branch master now . so to go to the gh-pages type: git checkout gh-pages again type: status
+|step 8|: so now we are in the gh-pages directory. type: dir to see the files we have here.
+|step 9|: make a directory in the gh-pages type: mkdir site   , site=is the name of directory that we are making
+          go inside that directory type: cd site          
+|step 10|: now open sublime text and save the an html page iside that site directory. in sublime text type: html(without any space)ctrl+space bar for           template
+and save the file
+|step 11|: now when we type: git status we will see a ./  because we are inside the site directory and ./ says that we have not committed at all
+|step 12|: lets go one directory up type: cd.. and then type: git status we wills ee that site/ means that site is not committed and not even marked to be           committed
+|step 13|: to committ it in our local machine we need to first mark it by typing: git add .  (this '.' is required its not a fullstop) and then typ: git           status and u will see it has been marked in green color
+|step 14|: to commit type: git commit -m "My First Page."   (-m is for given a message)
+now everything is sitting in the local repository type: git status. it will say that our local version of repository is ahead of the remote repository that is one in the github site. so we need to push it so that it also saves it in the remote repository.
+so after you type: git push to push the local repository it will ask for ur usernamea nd password. the password u will type will not be displayed so do not worry just write and press enter. also u can set it up to accept automatically ur username and password look for it in the internet
+|step 15|: now go to your github in the browser go inside your repsoitory reload the page u will see this site folder there.
+|step 16|: now go to setting open that url and then u will see that template. on the address bar after https://tjtanvir666.github.io/CourseEra-test/ add site/
+the whole thing would look like this https://tjtanvir666.github.io/CourseEra-test/site/ and press enter.... it like witht tha url u are asking to open this particular folder. to go into any other subfolder u can keep adding the name like ....../site/subfolder/ 
+|step 17|: now if u have modified your code again or midified anyhting for that mater even a signle line of code or anything inside your repository u will have to repeat from step: 11 to step 16 that is puch it again by marking it and all.
+
+         ********************** working with the brwoser sync *****************************
+|step:1| go inside directory that u want your browser to sync autoamtically. this needs node js. for now we will go to our  site directory of our local project directory.
+|step:2| for browser sync type: browser-sync start --server --directory --files "*"  and press enter
+so it says start the browser-sync in the server mode so that it will become a local http server for us and --directory it will give us directory of the folders that we are sitting in that is site directory and --files are the the files that the browser directory will watch for to update, so if any change happens it will update that in the browser and "*" means watch for all the files
+now just change something inside the index.html page and save and at the same time keep ur browser open to that local sync page u will see the immedaite change 
+

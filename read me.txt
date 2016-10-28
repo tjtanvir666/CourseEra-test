@@ -10,6 +10,7 @@ Github and BrowserSync:
 1) read the gitbook online atleast first 3 chapters to know about the github hosting of the web pages
 2) you will have to submit your assignmetns throught github
 3) look at the browser sync :) google formore options
+4) in the github always and always select the gh-pages branch instead of master branch to show your pages and folders
 
 |step 1|: create a new repository from gitHub.com (+ sign at the top right corner of the page)
 |step 2|: in the repository page go to settings -> github pages -> launch automatic page generator -> continue to layouts -> publish page
